@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My JavaScript Assignment</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; padding: 80px 20px; background: #f5f5f5; color: #222; }
+    button { padding: 12px 24px; font-size: 16px; cursor: pointer; border: none; border-radius: 6px; background: #222; color: white; }
+    #message { min-height: 28px; font-size: 20px; margin: 25px 0; }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Webpage!</h1>
+  <p id="message"></p>
+  <button id="messageButton">Click Me!</button>
+
+  <script>
+    const button = document.getElementById("messageButton");
+    const message = document.getElementById("message");
+
+    button.addEventListener("click", function () {
+      console.log("Button clicked");
+      if (message.innerText === "") {
+        message.innerText = "Every great idea starts with a single click!";
+      } else {
+        message.innerText = "Keep creating, learning, and trying new things!";
+      }
+    });
+  </script>
+</body>
+</html>
